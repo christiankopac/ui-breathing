@@ -1,10 +1,10 @@
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
-import { LinksFunction } from "@remix-run/node";
+import type { LinksFunction } from "@remix-run/node";
 
-import styles from "./tailwind.css";
+import "./tailwind.css";
 
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: styles },
+  { rel: "stylesheet", href: "/tailwind.css" },
 ];
 
 export default function App() {
@@ -26,7 +26,7 @@ export default function App() {
   );
 }
 
-export function ErrorBoundary({ error }) {
+export function ErrorBoundary({ error }: { error: Error }) {
   console.error(error);
   return (
     <html lang="en-US">
