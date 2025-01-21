@@ -1,40 +1,72 @@
-# Welcome to Remix!
+# Breathing Exercises App
 
-- 📖 [Remix docs](https://remix.run/docs)
+Una aplicación web interactiva para practicar diferentes técnicas de respiración con animaciones y guía visual.
 
-## Development
+## Características
 
-Run the dev server:
+- 🧘‍♂️ Múltiples patrones de respiración predefinidos
+- 🎨 Animaciones generativas con p5.js
+- ⏱️ Temporizador visual y guía de respiración
+- 📱 Diseño responsivo
+- 🎯 Interfaz minimalista y enfocada
 
-```shellscript
-npm run dev
+## Patrones de Respiración Incluidos
+
+- Box Breathing (4-4-4-4)
+- 4-7-8 Breathing
+- Deep Calm
+- Alternate Nostril
+- Ocean Breath
+- Energizing Breath
+- Lion's Breath
+
+## Tecnologías
+
+- React + Remix
+- TypeScript
+- Tailwind CSS
+- p5.js para animaciones generativas
+- Lucide React para iconos
+- Shadcn/ui para componentes
+
+## Desarrollo Local
+
+```bash
+# Instalar dependencias
+pnpm install
+
+# Iniciar servidor de desarrollo
+pnpm dev
+
+# Construir para producción
+pnpm build
+
+# Iniciar en modo producción
+pnpm start
 ```
 
-## Deployment
+## Estructura del Proyecto
 
-First, build your app for production:
-
-```sh
-npm run build
+```
+app/
+├── components/     # Componentes React
+├── routes/         # Rutas de Remix
+├── styles/         # Estilos globales
+└── utils/         # Utilidades y helpers
 ```
 
-Then run the app in production mode:
+## Contribuir
 
-```sh
-npm start
-```
+1. Fork el repositorio
+2. Crea una rama para tu feature (`git checkout -b feature/amazing-feature`)
+3. Commit tus cambios (`git commit -m 'Add some amazing feature'`)
+4. Push a la rama (`git push origin feature/amazing-feature`)
+5. Abre un Pull Request
 
-Now you'll need to pick a host to deploy it to.
+## Licencia
 
-### DIY
+MIT
 
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
+## Autor
 
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+[@christiankopac](https://kopac.dev)
