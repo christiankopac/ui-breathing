@@ -9,6 +9,9 @@
 # Production
 /build
 /dist
+/public/build
+/.netlify
+netlify/functions/server
 
 # Misc
 .DS_Store
@@ -41,5 +44,3 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
-
-public/build
