@@ -1,15 +1,32 @@
 [build]
   command = "pnpm run build"
   publish = "public"
-  functions = "netlify/functions"
+  functions = ".netlify/functions-internal"
+
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_FLAGS = "--version"
+  NODE_OPTIONS = "--max_old_space_size=4096"
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["@remix-run/react"]
+  included_files = ["public/build/**"]
 
 [dev]
   command = "pnpm run dev"
   port = 3000
+  targetPort = 3000
 
 [[redirects]]
   from = "/*"
-  to = "/.netlify/functions/server"
+  to = "/.netlify/functions-internal/server"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/build/*"
+  to = "/build/:splat"
   status = 200
 
 [[headers]]
